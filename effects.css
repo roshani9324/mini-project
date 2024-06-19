@@ -1,0 +1,28 @@
+.search-section input:focus,
+button:hover {
+    background-color: rgba(240, 255, 255, 1);
+    box-shadow: 0 0 12px 0 #017ebd;
+    border-color: #9dcced;
+    outline: none;
+}
+
+#feels-like:hover,
+#pressure:hover,
+#visibility:hover,
+#temp:hover {
+    background-color: rgba(165, 255, 255, 1);
+    box-shadow: 0 0 12px 0 #017ebd;
+    border-color: #9dcced;
+    outline: none;
+}
+
+#place:hover {
+    box-shadow: 0 0 12px 0 #017ebd;
+    border-color: #9dcced;
+    outline: none;
+}
+
+th:hover,
+td:hover {
+    background-color: rgba(165, 255, 255, 0.6);
+}

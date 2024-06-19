@@ -1,0 +1,41 @@
+#place {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.heading {
+    text-align: center;
+    padding: 35px 29px 0 35px;
+}
+
+.heading p {
+    font-size: 1.5em;
+    font-weight: 450;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.table table {
+    border-collapse: collapse;
+    width: 85%;
+    height: 80%;
+}
+
+th,
+td {
+    border: 10px solid transparent;
+}
+
+th {
+    font-size: 1.2rem;
+    font-weight: 440;
+}
+
+td {
+    font-size: 1.1rem;
+}

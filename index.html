@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/first-card.css">
+    <link rel="stylesheet" href="stylesheets/second-card.css">
+    <link rel="stylesheet" href="stylesheets/effects.css">
+    <link rel="stylesheet" href="stylesheets/places.css">
+    <title>Weather Website</title>
+</head>
+
+<body>
+    <div class="main-card">
+
+        <div class="first-card">
+
+            <div class="search-section">
+                <input type="text" placeholder="Enter City Name..." spellcheck="false" id="input">
+                <button><img src="images/search.png"></button>
+            </div>
+
+            <div class="weather-section">
+                <div class="weather">
+                    <img src="images/earth.png" class="weather-icon">
+                    <h1 class="temp">--°C</h1>
+                    <h2 class="description">Description</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="details">
+                    <div class="col" id="col1">
+                        <img src="images/humidity.png">
+                        <div>
+                            <p id="humidity">--%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col" id="col2">
+                        <img src="images/wind.png">
+                        <div>
+                            <p id="wind">-- km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="city">
+                    <h1 id="cityName">City Name</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="second-card">
+            <div class="info-card">
+                <div class="date">
+                    <p id="date">Todays Date</p>
+                </div>
+                <div class="sub-card">
+                    <div id="feels-like">
+                        <div id="tem">
+                            <img src="images/temperature-icon-png-1.png">
+                            <p>Feels Like</p>
+                        </div>
+                        <div id="tem-value">
+                            <p id="t-v">--°C</p>
+                        </div>
+                    </div>
+                    <div id="pressure">
+                        <div id="atm">
+                            <img src="images/atmospheric pressure.png">
+                            <p>Pressure</p>
+                        </div>
+                        <div id="atm-value">
+                            <p id="a-v">-- hPa</p>
+                        </div>
+                    </div>
+                    <div id="visibility">
+                        <div id="vis">
+                            <img src="images/eye.png">
+                            <p>Visibility</p>
+                        </div>
+                        <div id="vis-value">
+                            <p id="v-v">-- m</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="temp-place-card">
+                <div id="temp">
+                    <div class="na">
+                        <p>Temprerature</p>
+                        <p>History</p>
+                    </div>
+                    <div class="max-min">
+                        <img src="images/up-arrow.png" id="up-arrow">
+                        <p id="max-value">--°C</p>
+                    </div>
+                    <div class="max-min">
+                        <img src="images/down-arrow.png" id="down-arrow">
+                        <p id="min-value">--°C</p>
+                    </div>
+                </div>
+                <div id="place">
+                    <div class="heading">
+                        <p>Other common places</p>
+                    </div>
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <th>Places</th>
+                                <th>Temprerature</th>
+                                <th>Humidity</th>
+                                <th>Wind Speed</th>
+                            </tr>
+                            <tr>
+                                <td>Delhi</td>
+                                <td><span id="t1">--°C</span></td>
+                                <td><span id="h1">--%</span></td>
+                                <td><span id="w1">-- km/h</span></td>
+                            </tr>
+                            <tr>
+                                <td>Beijing</td>
+                                <td><span id="t2">--°C</span></td>
+                                <td><span id="h2">--%</span></td>
+                                <td><span id="w2">-- km/h</span></td>
+                            </tr>
+                            <tr>
+                                <td>Budapest</td>
+                                <td><span id="t3">--°C</span></td>
+                                <td><span id="h3">--%</span></td>
+                                <td><span id="w3">-- km/h</span></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        var objToday = new Date();
+        const date = objToday.getDate();
+        const months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        const curMonth = months[objToday.getMonth()];
+        const year = objToday.getFullYear();
+        var today = date + " " + curMonth + ", " + year
+        document.querySelector("#date").innerHTML = today
+    </script>
+</body>
+
+</html>
